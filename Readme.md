@@ -6,7 +6,6 @@
 namespace MirsaidovUmed;
 
 class Programmer
-
 {
     private array $info;
 
