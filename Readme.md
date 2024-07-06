@@ -5,6 +5,11 @@
 
 namespace MirsaidovUmed;
 
+interface ProfileDisplayInterface
+{
+    public function displayProfile(): string;
+}
+
 class Programmer
 {
     private array $info;
@@ -18,22 +23,33 @@ class Programmer
     {
         return $this->info;
     }
+}
+
+class ProgrammerProfileDisplay implements ProfileDisplayInterface
+{
+    private Programmer $programmer;
+
+    public function __construct(Programmer $programmer)
+    {
+        $this->programmer = $programmer;
+    }
 
     public function displayProfile(): string
     {
+        $info = $this->programmer->getInfo();
         $profile = "Programmer since high school (11th grade).\n";
         $profile .= "Backend developer with experience in PHP and Golang.\n";
 
-        if (!empty($this->info['projects'])) {
+        if (!empty($info['projects'])) {
             $profile .= "Projects:\n";
-            foreach ($this->info['projects'] as $project) {
+            foreach ($info['projects'] as $project) {
                 $profile .= "- {$project}\n";
             }
         }
 
-        if (!empty($this->info['skills'])) {
+        if (!empty($info['skills'])) {
             $profile .= "Skills:\n";
-            foreach ($this->info['skills'] as $skill) {
+            foreach ($info['skills'] as $skill) {
                 $profile .= "- {$skill}\n";
             }
         }
@@ -42,11 +58,12 @@ class Programmer
 }
 
 $programmer = new Programmer([
-    'projects' => ['FileHosting', 'SUP', 'UrlShotener'],
+    'projects' => ['FileHosting', 'SUP', 'UrlShortener'],
     'skills' => ['PHP', 'Golang', 'MySQL', 'Postgres', 'Laravel']
 ]);
 
-echo $programmer->displayProfile();
+$profileDisplay = new ProgrammerProfileDisplay($programmer);
+echo $profileDisplay->displayProfile();
 ```
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs?username=MirsaidovUmed&hide=html&show_icons=true&locale=en&theme=tokyonight)
