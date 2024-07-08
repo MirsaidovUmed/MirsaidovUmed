@@ -66,4 +66,4 @@ $profileDisplay = new ProgrammerProfileDisplay($programmer);
 echo $profileDisplay->displayProfile();
 ```
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MirsaidovUmed&langs_count=8)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MirsaidovUmed&langs_count=8&theme=tokyonight)
