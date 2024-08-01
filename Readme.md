@@ -58,7 +58,7 @@ class ProgrammerProfileDisplay implements ProfileDisplayInterface
 }
 
 $programmer = new Programmer([
-    'projects' => ['FileHosting', 'SUP', 'UrlShortener'],
+    'projects' => ['CloudStorage', 'SUP', 'UrlShortener'],
     'skills' => ['PHP', 'Golang', 'MySQL', 'Postgres', 'Laravel']
 ]);
 
