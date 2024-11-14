@@ -59,7 +59,7 @@ class ProgrammerProfileDisplay implements ProfileDisplayInterface
 
 $programmer = new Programmer([
     'projects' => ['CloudStorage', 'SUP', 'UrlShortener'],
-    'skills' => ['PHP', 'Golang', 'MySQL', 'Postgres', 'Laravel']
+    'skills' => ['PHP', 'Golang', 'MySQL', 'Postgres', 'Laravel', 'Symfony']
 ]);
 
 $profileDisplay = new ProgrammerProfileDisplay($programmer);
@@ -71,6 +71,7 @@ echo $profileDisplay->displayProfile();
   <img src="https://github.com/devicons/devicon/blob/master/icons/go/go-original-wordmark.svg" title="Go" alt="Golang" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/php/php-original.svg" title="php" alt="php" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/laravel/laravel-line-wordmark.svg" title="laravel" alt="laravel" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/symfony/symfony-original-wordmark.svg" title="symfony" alt="symfony" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/wordpress/wordpress-original.svg" title="WordPress" alt="WordPress" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/composer/composer-original.svg" title="composer" alt="composer" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg" title="VScode" alt="VScode" width="40" height="40"/>&nbsp;
